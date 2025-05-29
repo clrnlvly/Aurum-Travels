@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurum Travels</title>
 
+     <!-- jquery CDN -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -40,18 +46,18 @@
         </ul>
 
         <nav class="black">
-            <div class="nav-wrapper container">
-                <a href="#!" class="brand-logo"><span class="amber-text text-lighten-1">Aurum</span>Travels</a>
-                <a href="#" data-target="mobile-view" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Explore<i
-                                class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contacts</a></li>
-                </ul>
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo"><span class="amber-text text-lighten-1">Aurum</span>Travels</a>
+              <a href="#" data-target="mobile-view" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Explore<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contacts</a></li>
+              </ul>
             </div>
-        </nav>
+          </nav>
+          
     </div>
 
     <!-- Sidenav -->
@@ -73,7 +79,7 @@
         <li><a href="#traveltips" class="white-text"><i class="fa-solid fa-circle-info white-text"></i>Travel Tips</a>
         </li>
         <li><a href="gallery.html" class="white-text"><i class="fa-solid fa-image white-text"></i>Gallery</a></li>
-        <li><a href="all_deli.html" class="white-text"><i class="fa-solid fa-utensils white-text"></i>SEA Delicacies</a>
+        <li><a href="all_deli.html" class="white-text"><i class="fa-solid fa-utensils white-text"></i> Delicacies</a>
         </li>
         <li><a href="#about" class="white-text"><i class="fa-solid fa-circle-question white-text"></i>About Us</a></li>
         <li><a href="#contact" class="white-text"><i class="fa-solid fa-address-book white-text"></i>Contacts</a></li>
@@ -303,7 +309,7 @@
         <!-- Second Contact Card -->
         <div class="col s12 m4 l4 center-align">
             <div class="card-panel white black-text">
-                <img src="images/LOVELY .jpeg" alt="lovely" class="responsive-img circle">
+                <img src="images/lvly.jpg" alt="lovely" class="responsive-img circle">
                 <h6>Lovely Clareon</h6>
                 <div class="socials">
                     <p>clareonlovely@gmail.com</p>
@@ -321,59 +327,57 @@
         <p>&copy; 2024 <span class="amber-text text-lighten-1">Aurum</span>Travels | Designed with ❤️</p>
     </footer>
 
-    <!-- jquery CDN -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
+        $(document).ready(function () {
+            // Initialize carousel
+            var instance = $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                duration: 500
+            });
+    
+            // Autoplay every 5 seconds
+            setInterval(function () {
+                instance.carousel('next');
+            }, 5000);
+        });
+
+
+
         $(document).ready(function () {
             $('.sidenav').sidenav();
+             // Initialize dropdown
+             $(".dropdown-trigger").dropdown();
+
+        $('#dropdown1 li a').on('click', function (e) {
+            e.preventDefault(); // Prevent the default link behavior
+        
+            // Get the text of the selected dropdown item
+            var selectedText = $(this).text();
+        
+            // Update the text of the dropdown trigger (the button text)
+            $('.dropdown-trigger').html(selectedText + ' <i class="material-icons right">arrow_drop_down</i>');
+        
+            // Remove active class from all dropdown items
+            $('#dropdown1 li').removeClass('active');
+        
+            // Add active class to the selected item (on <li> element)
+            $(this).parent().addClass('active');  // Ensure the parent <li> is marked as active
+            
+            // Open "Delicacies" in a new tab using JavaScript
+            if (selectedText === 'Delicacies') {
+                window.location.href = 'all_deli.html'; // Open all_deli.html in a new tab
+            } else if (selectedText === 'Travel Tips') {
+                $('.country').load('traveltips.html');
+            } else if (selectedText === 'Gallery') {
+                window.location.href = 'gallery.html'; // Open gallery.html in a new tab
+            }
         });
-
-        $(document).ready(function () {
-            // Initialize dropdown
-            $(".dropdown-trigger").dropdown();
-
-            // When a dropdown item is clicked
-            $('#dropdown1 li a').on('click', function (e) {
-                e.preventDefault(); // Prevent the default link behavior
-
-                // Get the text of the selected dropdown item
-                var selectedText = $(this).text();
-
-                // Update the text of the dropdown trigger (the button text)
-                $('.dropdown-trigger').html(selectedText + ' <i class="material-icons right">arrow_drop_down</i>');
-
-                // Remove active class from all dropdown items
-                $('#dropdown1 li').removeClass('active');
-
-                // Add active class to the selected item (on <li> element)
-                $(this).parent().addClass('active');  // Ensure the parent <li> is marked as active
-
-                // Open "Delicacies" in a new tab using JavaScript
-                if (selectedText === 'Delicacies') {
-                    window.location.href = 'all_deli.html'; // Open all_deli.html in a new tab
-                } else if (selectedText === 'Destinations') {
-                    $('.country').load('destinations.html');
-                } else if (selectedText === 'Travel Tips') {
-                    $('.country').load('traveltips.html');
-                } else if (selectedText === 'Gallery') {
-                    window.location.href = 'gallery.html'; // Open gallery.html in a new tab
-                }
-            });
-
-            // Load default content (Destinations)
-            $('.country').load('destinations.html');
-            $('.pagination li:first').addClass('active amber'); // Set default active state with black text
-        });
-    </script>
+    });
 
 
 
-    <script>
-        $(document).ready(function () {
+    $(document).ready(function () {
             // Navbar item click event
             $('.nav-wrapper ul li a').on('click', function (e) {
                 e.preventDefault(); // Prevent default anchor behavior
@@ -394,9 +398,7 @@
             });
         });
 
-    </script>
 
-    <script>
         $(document).ready(function () {
             // Smooth scroll for all links with the class 'scroll-to'
             $(".scroll-to").on("click", function (e) {
@@ -409,24 +411,9 @@
                     800 // Duration of the animation in milliseconds
                 );
             });
-        });
-    </script>
+        });    
 
-    <script>
-        $(document).ready(function () {
-            $('.carousel-slider').carousel({
-                fullWidth: true,
-                duration: 500
-            });
 
-            setInterval(function () {
-                $('.carousel').carousel('next');
-            }, 5000);
-        });
-
-    </script>
-
-    <script>
         $(document).ready(function () {
             // Load default content (Philippines)
             $('.country').load('philippines.html');
@@ -464,10 +451,7 @@
                 $(this).parent().addClass('active black-text');
             });
         });
-
     </script>
-
-
 
 </body>
 
