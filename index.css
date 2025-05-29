@@ -146,7 +146,7 @@ a {
 
 .travel-tips {
     background: url('./images/travel1.jpg') center/cover;
-    height: 100vh;
+    /* height: 100vh; */
     z-index: 1;
     position: relative;
 }
