@@ -1,30 +1,28 @@
-# 🌟 Aurum Travels Landing Page
+# 🌴 Aurum Travels
 
-Creative and responsive travel-themed landing page built with **Materialize CSS**.
+A responsive travel-themed microsite built with **HTML**, **CSS**, and **Materialize CSS**, showcasing Southeast Asian destinations.
 
-## 🌍 Live Demo  
-[🔗 View Live](https://clrnlvly.github.io/Aurum-Travels/)
-
----
-
-## 🎯 About
-
-A sleek, multi-page website showcasing various travel destinations across Southeast Asia—like **Brunei**, **Cambodia**, **Indonesia**, **Philippines**, **Thailand**, **Vietnam**, etc.—complete with video embeds, an image gallery, and a booking section (frontend only).
-
-This project was designed to demonstrate the use of [Materialize CSS](https://materializecss.com/) in building a clean, responsive layout with custom content per destination.
+## 🔗 Live Demo  
+[🔗 View on GitHub Pages](https://clrnlvly.github.io/Aurum-Travels/)
 
 ---
 
-## 🧩 Tech Stack
+## ✨ Features
 
-- **Frontend**: HTML, CSS
-- **UI Framework**: Materialize CSS
-- **Other Assets**: Images, embedded YouTube videos
+- 📍 Multi-page layout with destinations like the Philippines, Vietnam, Cambodia, and more
+- 🎥 Video and image galleries
+- 📱 Responsive design using Materialize CSS
+- 🧭 Navigation and "Book Now" sections
 
 ---
 
-## 🚀 Features
+## 🚀 How to Run Locally
 
-- ✈️ Individual destination pages (`philippines.html`, `vietnam.html`, etc.)
-- 🎥 Video showcase per destination (`philippines-video.html`, etc.)
-- 🖼️ Gallery page with responsive layout (`gallery.html`)
+> 🧑‍💻 Recommended: Use **VS Code** with the **Live Server** extension
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/clrnlvly/Aurum-Travels.git
+   cd Aurum-Travels
+2. Open the folder in VS Code
+3. Right-click on index.html → "Open with Live Server"
