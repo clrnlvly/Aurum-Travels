@@ -1,15 +1,16 @@
 # 🌴 Aurum Travels
 
-A responsive travel-themed microsite built with **HTML**, **CSS**, and **Materialize CSS**, showcasing Southeast Asian destinations.
+A website built with **HTML**, **CSS**, and **Materialize CSS**, showcasing Southeast Asian destinations.
 
 ## 🔗 Live Demo  
 [🔗 View on GitHub Pages](https://clrnlvly.github.io/Aurum-Travels/)
 
+## Youtube: https://youtu.be/Q0S6oqd3EaI
 ---
 
 ## ✨ Features
 
-- 📍 Multi-page layout with destinations like the Philippines, Vietnam, Cambodia, and more
+- 📍 Explore destinations like the Philippines, Vietnam, Cambodia, and more
 - 🎥 Video and image galleries
 - 📱 Responsive design using Materialize CSS
 - 🧭 Navigation and "Book Now" sections
