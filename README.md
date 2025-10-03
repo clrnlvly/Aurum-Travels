@@ -5,7 +5,8 @@ A website built with **HTML**, **CSS**, and **Materialize CSS**, showcasing Sout
 ## 🔗 Live Demo  
 [🔗 View on GitHub Pages](https://clrnlvly.github.io/Aurum-Travels/)
 
-## Youtube: https://youtu.be/gr_sUvkmSEw
+## Video Demo
+https://drive.google.com/file/d/1vGZjCZpzBpCaNKm256VZhmJYzXuKWHIV/view?usp=drive_link
 ---
 
 ## ✨ Features
